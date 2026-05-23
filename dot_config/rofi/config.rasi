@@ -1,0 +1,91 @@
+configuration {
+    modi: "run,drun,window";
+    icon-theme: "Oranchelo";
+    show-icons: true;
+    terminal: "alacritty"; /* Change to your terminal */
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    sidebar-mode: true;
+}
+
+@theme "/dev/null" /* Clears default styles */
+
+* {
+    bg-col:  #1e1e2e;    /* Dark purple/slate background */
+    bg-col-light: #313244;
+    border-col: #cba6f7; /* Accent purple */
+    selected-col: #313244;
+    text-col: #cdd6f4;   /* Light text */
+    main-fg: #f5e0dc;
+    
+    width: 600;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    height: 360px;
+    border: 3px;
+    border-color: @border-col;
+    background-color: @bg-col;
+    border-radius: 10px; /* Rounded corners for Hyprland vibe */
+}
+
+mainbox {
+    background-color: @bg-col;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+prompt {
+    background-color: @border-col;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 3px;
+    margin: 10px 0px 0px 10px;
+}
+
+entry {
+    padding: 6px;
+    margin: 10px 0px 0px 10px;
+    text-color: @text-col;
+    background-color: @bg-col;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px 0px 0px 20px;
+    columns: 1;
+    lines: 5;
+    background-color: @bg-col;
+}
+
+element {
+    padding: 5px;
+    background-color: @bg-col;
+    text-color: @text-col  ;
+}
+
+element-icon {
+    size: 25px;
+}
+
+element selected {
+    background-color:  @selected-col ;
+    text-color: @border-col  ;
+    border-radius: 5px;
+}

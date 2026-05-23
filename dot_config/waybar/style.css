@@ -1,0 +1,58 @@
+
+@import "colors.css";
+
+* {
+    font-family: "JetBrains Mono", "Noto Sans", sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+#waybar {
+    background-color: @background;
+    color: @on-background;
+    border-bottom: 2px solid @outline;
+    transition: none;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: @on-background;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    background-color: @primary-container;
+    color: @on-primary-container;
+    border-bottom: 3px solid @primary;
+}
+
+#workspaces button.hover {
+    background-color: @surface;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#volume,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+    padding: 0 10px;
+    color: @on-background;
+    background-color: @surface;
+    border-radius: 4px;
+    margin: 4px 2px;
+}
+
+#clock {
+    color: @on-primary-container;
+    background-color: @primary-container;
+}
+
